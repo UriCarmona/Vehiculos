@@ -169,3 +169,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+app_vehiculos.py
+.gitignore
+README.md
+requirement.txt
+.gitignore
+vehicles_us.csv
+notebooks/EDA.ipynb
+streamlit/confing.toml
+.gitignore
