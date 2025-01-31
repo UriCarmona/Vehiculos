@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly_express as px
-from st_aggrid import AgGrid, GridOptionsBuilder
+
 
 df_vehiculos = pd.read_csv ('vehicles_us.csv')
 st.header('VEHICLE DATA')
