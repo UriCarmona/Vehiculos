@@ -2,11 +2,10 @@ import pandas as pd
 import streamlit as st
 import plotly_express as px
 
-
 df_vehiculos = pd.read_csv ('vehicles_us.csv')
 st.header('VEHICLE DATA')
 
-df_group = df_vehiculos.groupby('model')['price'].sum()
+df_group = df_vehiculos.groupby('model')['price'].sum().sort_values(ascending=False)
 st.dataframe(df_group, use_container_width=True)
 
 hist_button = st.checkbox('build histogram')
@@ -32,5 +31,3 @@ if disp_button:
     fig = px.scatter(df_vehiculos, x="odometer", y="price") # crear un gráfico de dispersión
 
     st.plotly_chart(fig, use_container_width=True)
-
-
